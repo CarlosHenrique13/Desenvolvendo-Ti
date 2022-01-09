@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python3 Aula 02</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            background-color: #cccccc;
+        }
+        section#home {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            background-color: white;
+            border-radius: 5px;
+            padding: 5px;
+            box-shadow: 5px 2px rgba(27, 27, 27, 0.801);
+            padding-bottom: 2%;
+        }
+        img#aula {
+            margin-top: 2%;
+            width: 80%;
+            height:40%;
+            border-radius: 5px;
+        }
+        h1{
+            color: #377BA6;
+        }
+        h2{
+            padding-top: 2%;
+            color: #594C23;
+            /*text-align: left;*/
+            margin: auto;
+        }
+        a{
+            color: #BF9D36;
+            padding-left: 2%;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #F2C641;
+        }
+        p {
+            padding-left: 3%;
+            text-align: justify;
+        }
+        button#button1 {
+            background-color: rgba(27, 27, 27, 0.801);
+            color: white;
+            margin-left: 8%;
+            border-radius: 5px;
+            text-align: center;
+        }
+        pre{
+            background-color: rgba(27, 27, 27, 0.801);
+            width: 80%;
+            color: white;
+            margin: auto;
+            padding-top: 2%;
+            border-radius: 5px;
+            padding-left: 5px;
+            text-align: left;
+        }
+        span#bold {
+            font-weight: bold;
+        }
+        span#item {
+            margin-left: 2%;
+            color: gray;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+    function CopyToClipboard(containerid) {
+        if (document.selection) { 
+            var range = document.body.createTextRange();
+            range.moveToElementText(document.getElementById(containerid));
+            range.select().createTextRange();
+            document.execCommand("copy"); 
+
+        } else if (window.getSelection) {
+            var range = document.createRange();
+            range.selectNode(document.getElementById(containerid));
+            window.getSelection().addRange(range);
+            document.execCommand("copy");
+            alert("text copied") 
+        }}
+    </script>
+</head>
+<body>
+    <section id='home'>
+
+    
+        <img id="aula" src="./Python3 Thunb.png" alt="">
+        <h1> Aula 02</h1>
+        <h2>Variáveis</h2>
+        <p><span id='bold'>O que e uma variável?</span><br>
+            Uma variável é uma área de memória onde armazenamos um valor qualquer. Esta área é associada a um nome ou identificador.<br>
+            <span id='bold'>Tipos de variáveis</span><br>
+            <span id="item">str(strings)</span> Uma cadeia de caracteres geralmente utilizada para representar palavras, frases ou textos.<br>
+            <span id="item">int(inteiros)</span> Números sem virgulas positivos e negativos.<br>
+            <span id="item">float(flutuantes)</span> Números com decimais(Exemplo: 1.52).<br>
+            <span id="item">bool(Verdadeiro/Falso)</span> Valore True ou False(1 ou 0).<br>
+        </p>
+        <p><span id="bold">Ferramentas</span><br>
+            <a href="https://www.python.org" target="_blank">Site do Python</a>
+            <a href="https://www.online-python.com/" target="_blank">Editor Online</a>
+        </p>
+
+        <p><span id="bold">Material</span><br>
+            <a href="./aula_02.py" download=""> Download do Codigo</a>
+            <a href="https://github.com/CarlosHenrique13/Youtube/blob/main/python3/aula-02/aula_02.py">Visualizar o Codigo</a>
+        </p>
+        
+        <h2>Codigo Variáveis</h2>
+        <p><button id="button1" onclick="CopyToClipboard('cod1')">Copy</button><p>
+        <pre id='cod1'>
+# String
+nome = "Pedro"
+print("Nome: ",nome)
+# Inteiros
+idade = 17
+print("Idade",idade)
+# Flutuantes
+peso = 55.6
+print("Peso",peso)
+# booleanos
+sexo = False
+# Compara
+if sexo:
+    print(f"Masculino: {sexo}")
+else:
+    print(f"Feminino: {sexo}")
+        </pre>
+
+        <h2>Codigo Fazer Perfil</h2>
+        <p><button id="button1" onclick="CopyToClipboard('cod2')">Copy</button><p>
+        <pre id='cod2'>
+# String
+nome = str(input("Nome: "))
+# Inteiros
+idade = int(input("Idade: "))
+# Flutuantes
+peso = float(input("Peso: : "))
+# Str
+sexo = str(input("Sexo M para Masculino F para Feminino: "))
+print("Nome: ",nome)
+print("Idade",idade)
+print("Peso",peso)
+print("Sexo: ",sexo)
+
+
+        </pre>
+
+        <h2>Codigo Somar Valor</h2>
+        <p><button id="button1" onclick="CopyToClipboard('cod3')">Copy</button><p>
+        <pre id='cod3'>
+v1 = int(input("Valor1: "))
+v2 = int(input("Valor2: "))
+soma = v1 + v2
+print(f"{v1} + {v2} = {soma}")
+        </pre>
+    </section>
+</body>
+</html>
